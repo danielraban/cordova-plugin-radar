@@ -1,9 +1,9 @@
 {
-  "name": "@radarlabs/cordova-plugin-radar",
+  "name": "@danielraban/cordova.plugin.radar.hathway",
   "description": "Cordova plugin for Radar, location data infrastructure",
   "homepage": "https://www.radar.io",
   "license": "Apache-2.0",
-  "version": "3.0.9",
+  "version": "3.1.0",
   "main": "www/Radar.js",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -14,14 +14,14 @@
     "eslint-plugin-react": "^6.9.0"
   },
   "bugs": {
-    "url": "https://github.com/radarlabs/cordova-plugin-radar/issues"
+    "url": "https://github.com/radarlabs/cordova.plugin.radar.hathway/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/radarlabs/cordova-plugin-radar.git"
+    "url": "git+https://github.com/radarlabs/cordova.plugin.radar.hathway.git"
   },
   "cordova": {
-    "id": "cordova-plugin-radar",
+    "id": "cordova.plugin.radar.hathway",
     "platforms": [
       "android",
       "ios"
@@ -31,5 +31,9 @@
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
-  ]
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
 }

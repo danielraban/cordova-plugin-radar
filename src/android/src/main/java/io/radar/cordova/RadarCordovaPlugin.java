@@ -253,7 +253,7 @@ public class RadarCordovaPlugin extends CordovaPlugin {
         boolean foreground = cordova.hasPermission("android.permission.ACCESS_FINE_LOCATION");
         if (Build.VERSION.SDK_INT >= 29) {
             if (foreground) {
-                boolean background = cordova.hasPermission("android.permission.ACCESS_BACKGROUND_LOCATION");
+                boolean background = false;
                 str = background ? "GRANTED_BACKGROUND" : "GRANTED_FOREGROUND";
             } else {
                 str = "DENIED";
@@ -267,12 +267,7 @@ public class RadarCordovaPlugin extends CordovaPlugin {
 
     public void requestPermissions(final JSONArray args, final CallbackContext callbackContext) throws JSONException {
         final boolean background = args.getBoolean(0);
-
-        if (background && Build.VERSION.SDK_INT >= 29) {
-            cordova.requestPermissions(this, 0, new String[] { "android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_BACKGROUND_LOCATION" });
-        } else {
             cordova.requestPermissions(this, 0, new String[] { "android.permission.ACCESS_FINE_LOCATION" });
-        }
 
         callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
     }
